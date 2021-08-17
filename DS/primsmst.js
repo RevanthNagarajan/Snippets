@@ -3,6 +3,10 @@ class Graph {
         this.graph = {};
         this.acheived = false;
     }
+
+    get () {
+        return this.graph
+    }
     
     addRoute(...params) {
         this.graph[params[0]] = this.graph[params[0]] && this.graph[params[0]].length ? [...this.graph[params[0]],{ place : params[1], distance : params[2]}] : [{ place : params[1], distance : params[2]}];
@@ -69,4 +73,5 @@ graph.addRoute(6, 7, 1);
 graph.addRoute(6, 8, 6);
 graph.addRoute(7, 8, 7);
 
+console.log((graph.get()))
 console.log(graph.mst());

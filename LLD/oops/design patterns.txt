@@ -1,0 +1,13 @@
+Design patterns
+
+http://www.newthinktank.com/2012/08/observer-design-pattern-tutorial/
+
+http://www.newthinktank.com/2012/09/builder-design-pattern-tutorial/
+
+http://www.newthinktank.com/2012/09/prototype-design-pattern-tutorial/
+
+http://www.newthinktank.com/2012/09/abstract-factory-design-pattern/
+
+http://www.newthinktank.com/2012/09/factory-design-pattern-tutorial/
+
+http://www.newthinktank.com/2012/08/strategy-design-pattern-tutorial/

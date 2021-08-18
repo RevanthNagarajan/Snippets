@@ -60,6 +60,29 @@ let Trie = function() {
 		return words.length > 0 ? words : mo;
 	};
 
+	this.sendDS = () => {
+		return this.root;
+	}
+
+	/*this.searchSuggestions = (str, root) => {
+		let list = [];
+		let node  = root;
+		let builder = ``;
+		function findAll(input,builder) {
+			if(list.length==10) return;
+			if(input.isEnd()) { list.push(builder); return; }
+			for(let letr of input.keys.keys()){
+				findAll(input.get(letr).keys,builder+letr)
+			}
+		}
+		while(str.length) {
+			node = node.keys.get(str[0]);
+			buildTree+=str[0];
+			str = str.substring(0);
+		}
+		findAll(node,builder)
+		return list;
+	}*/
 };
 
 myTrie = new Trie()
@@ -75,3 +98,4 @@ console.log(myTrie.isWord('doll'))
 console.log(myTrie.isWord('dor'))
 console.log(myTrie.isWord('dorf'))
 console.log(myTrie.print())
+console.log(myTrie.sendDS())

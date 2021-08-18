@@ -2,22 +2,20 @@
 const map = { 0 : " ", 1 : ".," , 2 : "abc", 3 : "def", 4 : "ghi", 5 : "jkl", 6 : "mno", 7 :"pqrs" , 8 : "tuv", 9 :"wxyz" }
 
 const  generateCombos = (nums) => {
-    const len = nums.length;
-    let result = []
-    if(len ===0) return result;
-    
-    function bfs (i,str) {
-        if(i===len) { result.push(str); return; }
+    let len = inp.length;
+    if(!inp) return []
+    let res = [];
+    function bfs (str,i) {
+        if(i==len) res.push(str)
         else {
-            let letters = map[nums[i]]
-            for(let x=0; x<letters.length; x++) {
-                bfs(i+1,str+letters[x])
+            let letters = map[inp[i]];
+            for(let j = 0; j< letters.length; j++ ) {
+                bfs(str+letters[j],i+1)
             }
         }
     }
-    
-    bfs(0,"")
-    return result;
+    bfs("",0)
+    return res
 }
 
 console.log(generateCombos("238"))
@@ -27,17 +25,15 @@ console.log(generateCombos("238"))
 
 
 const generateParentheses = (n) => {
-    const result = [];
-    function dfs (str, left, right) {
-        if(left ===n && right ===n ) {
-            result.push(str); 
-            return;
-        }
-        if(left!==n) { dfs(str+"(",left+1,right)}
-        if(left>right) { dfs(str+")",left,right+1)}
-    };
-    dfs("", 0, 0);
-    return result;
+    if(n<1) return [];
+    let res = []
+    function dfs (brac,l,r) {
+        if(l==n && r==n) res.push(brac)
+        if(l!=n) dfs(brac+"(",l+1,r);
+        if(l>r) dfs(brac+")",l,r+1);
+    }
+    dfs("",0,0)
+    return res;
 }
 
 console.log(generateParentheses(4))  

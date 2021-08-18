@@ -1,6 +1,6 @@
 let input = "(((a())))";
 
-function isBalanced(x) {
+function isBalanced(x) { //wrong - use stack
     let c = 0;
     x = [...x];
     x.forEach(e => {

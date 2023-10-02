@@ -21,9 +21,6 @@ const  generateCombos = (nums) => {
 console.log(generateCombos("238"))
 
 
-
-
-
 const generateParentheses = (n) => {
     if(n<1) return [];
     let res = []

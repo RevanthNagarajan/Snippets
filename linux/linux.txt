@@ -1,0 +1,62 @@
+sudo su -   super user root access
+
+ls -l = long list
+ls -a = hidden
+ls -lh = human
+ls -F = files, dit with '/'
+ls -r = name desc
+ls -R = subdir
+ls -ltr = modified asc
+ls -ls  = size sort
+ls -i = serial number
+ls --version
+ls --help
+ls -l /tmp
+ls -n = UID/GID files
+-------------------------------------------
+alias
+-------------------------------------------
+cd -- = prev
+cd ..
+cd ../ ../
+cd /v<TAB>/s<TAB> = matching path
+cd /etc/v* = closest match
+pushd to some directory & popd goes to the prevs
+cd New\ folder/ || cd 'New folder'
+-------------------------------------------
+dir /
+dir -1 = one per line
+dir -a
+dir -d || dir -dl
+dir -il
+dir -s, dir -S, dir -shl, dir -ashlS, dir -ashlt
+dir ahgG = owners and group owners
+dir -al --author
+dir -l --group-directories-first
+dir -R
+dir -l --author = id
+dir -am = commas
+-------------------------------------------
+/bin/pwd
+ln -s /x/y/z mnx --> cd mnx = link
+/bin/pwd -L, /bin/pwd -P = Sym links
+a=$(pwd)
+echo "$PWD $OLDPWD"
+-------------------------------------------
+touch xyz
+touch -a xyz = access and modification time to current
+touch -c xyz = avoids creation of new file
+touch -m xyz = modification time to current
+touch -c MMDDHHMM xyz
+touch -c YYMMDDHHMM.SS xyz
+-------------------------------------------
+export FORCE_UNSAFE_CONFIGURE=1
+./configure
+# cp src/cp /usr/local/bin/cp
+# cp src/mv /usr/local/bin/mv
+# mv --progress-bar Songs/ /data/
+
+-------------------------------------------
+
+systemctl process docker
+ps -ef|grep ""
